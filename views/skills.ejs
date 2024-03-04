@@ -1,0 +1,27 @@
+<html>
+    <%- include('./partials/head.ejs')%>
+    <body>
+        <%- include('./partials/nav.ejs')%>
+    <div class="blog content">
+        
+        <div class="box">
+            <h1>Top Skills</h1>
+            <p>list of skills</p>
+        <% if(sks.length >0) { %>
+            <% sks.forEach(sk=>{%>
+                <div class ="skillbox">
+                    <a class="Single" href="/blogs/<%=sk._id%>">
+                <h3 ><%= sk.title %></h3></a>
+                <p><%= sk.clr %></p>
+                <div class = "skill">
+                    <div class="level" ><canvas id="myCanvas" width="<%= sk.lvl %>" height="15" style="background: #f3db84;"></canvas></div>
+                    
+       
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+    </div>
+    <%- include('./partials/footer.ejs')%>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <%- include('./partials/head.ejs')%>
+    <body>
+        <%- include('./partials/nav.ejs')%>
+    <div class="blog content">
+        <h1>Contact me</h1>
+        <form class="create-blog form" method="post" action="/contact">
+        <label for = "email">Email</label>
+        <input id = "eml" name  ="email" class ="create-blog input" required></input>
+        <label for = "subject">Subject</label>
+        <input id = "sjt" name  ="subject" class ="create-blog input" required></input>
+        <label for = "comment">Comment</label>
+        <textarea id = "cmt" name  ="comment" class ="create-blog textarea" required></textarea>
+        <button id = "btnSmt">submit</button>
+    </form>
+    </div>
+    <%- include('./partials/footer.ejs')%>
+</body>
+</html>
